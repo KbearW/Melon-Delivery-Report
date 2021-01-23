@@ -8,9 +8,8 @@ def report(delivery_date, file_name):
         line = line.rstrip()
         words = line.split('|')
 
-        melon = words[0]
-        count = words[1]
-        amount = words[2]
+        # used unpacking to reduce the # of lines
+        melon, count, amount = words
 
         print(f"Delivered {count} {melon}s for total of ${amount}")
     # close the file by calling the function
